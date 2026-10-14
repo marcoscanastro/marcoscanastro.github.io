@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          "src/components/sections/Hero.jsx"
+        ],
+        "createdAt": "2026-09-21T12:43:28.067Z",
+        "reason": "user confirmed: copied verbatim from the user-provided reference design (approved in plan) which uses this exact gradient on the hero headline highlight"
+      }
+    ]
+  }
+}
