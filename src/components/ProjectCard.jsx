@@ -108,8 +108,8 @@ export function ProjectCard({ project, i = 0 }) {
 
       <div className="flex flex-1 flex-col justify-between p-6">
         <div>
-          <div className="mb-2 flex items-start justify-between gap-3">
-            <h3 className="font-display text-xl font-bold text-on-surface transition-colors duration-200 group-hover:text-primary">
+          <div className="mb-2 flex flex-wrap items-start justify-between gap-x-3 gap-y-2">
+            <h3 className="min-w-0 flex-1 basis-48 font-display text-xl font-bold text-on-surface transition-colors duration-200 group-hover:text-primary">
               {project.title[lang]}
             </h3>
             {hasActions ? (

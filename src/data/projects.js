@@ -1,16 +1,16 @@
 // media: vídeo curto + poster em public/projects/ (ver DOCUMENTACAO.md). logo: ícone real da app. icon: glifo de reserva.
 export const projects = [
   {
-    id: "finflow",
-    title: { pt: "FinFlow — Gestão Financeira", en: "FinFlow — Finance Manager" },
+    id: "croma-fab",
+    title: { pt: "CROMA_FAB — Marketplace de Cosplays 3D", en: "CROMA_FAB — 3D Cosplay Marketplace" },
     description: {
-      pt: "App Android de finanças pessoais em Kotlin e Jetpack Compose: despesas, receitas, metas e cartões, com relatórios em PDF e Excel, ligada a uma API REST com autenticação JWT.",
-      en: "Personal finance Android app in Kotlin and Jetpack Compose: expenses, income, goals and cards, with PDF and Excel reports, connected to a REST API with JWT authentication.",
+      pt: "Marketplace full-stack com pagamentos Stripe e escrow automático: API em Laravel 12 e duas SPAs Vue 3 (loja e backoffice), com makers independentes, disputas, PWA e interface em PT/EN. Inclui uma variante do backoffice em Inertia.js.",
+      en: "Full-stack marketplace with Stripe payments and automatic escrow: a Laravel 12 API and two Vue 3 SPAs (storefront and backoffice), with independent makers, disputes, PWA and a PT/EN interface. Includes a backoffice variant built with Inertia.js.",
     },
-    tech: ["Kotlin", "Jetpack Compose", "Retrofit"],
-    icon: "savings",
-    logo: "/projects/finflow-icon.webp",
-    links: { github: "https://github.com/Katsuo666/FinFlow_Project", demo: "" },
+    tech: ["Laravel", "Vue 3", "Inertia.js", "Stripe"],
+    icon: "storefront",
+    private: true,
+    links: { github: "", demo: "" },
   },
   {
     id: "hand-of-god",
@@ -52,6 +52,18 @@ export const projects = [
       github: "https://github.com/Katsuo666/Teste_site_Google-model-viewer",
       demo: "https://teste-site-google-model-viewer.vercel.app",
     },
+  },
+  {
+    id: "finflow",
+    title: { pt: "FinFlow — Gestão Financeira", en: "FinFlow — Finance Manager" },
+    description: {
+      pt: "App Android de finanças pessoais em Kotlin e Jetpack Compose: despesas, receitas, metas e cartões, com relatórios em PDF e Excel, ligada a uma API REST com autenticação JWT.",
+      en: "Personal finance Android app in Kotlin and Jetpack Compose: expenses, income, goals and cards, with PDF and Excel reports, connected to a REST API with JWT authentication.",
+    },
+    tech: ["Kotlin", "Jetpack Compose", "Retrofit"],
+    icon: "savings",
+    logo: "/projects/finflow-icon.webp",
+    links: { github: "https://github.com/Katsuo666/FinFlow_Project", demo: "" },
   },
   {
     id: "mindarjs",
@@ -96,6 +108,18 @@ export const projects = [
       github: "https://github.com/Katsuo666/Teste_site_AR.js",
       demo: "https://teste-site-ar-js.vercel.app",
     },
+  },
+  {
+    id: "gdn",
+    title: { pt: "GDN — Jogo em Godot", en: "GDN — Godot Game" },
+    description: {
+      pt: "Jogo em Godot 4 e GDScript com cenas de sistema solar, planetas, naves e veículos, construído sobre o template COGITO (jogador em primeira pessoa, inventário e interações).",
+      en: "Godot 4 game in GDScript with solar system, planet, ship and vehicle scenes, built on the COGITO template (first-person player, inventory and interactions).",
+    },
+    tech: ["GDScript", "Godot 4"],
+    icon: "sports_esports",
+    private: true,
+    links: { github: "", demo: "" },
   },
   {
     id: "btv",
