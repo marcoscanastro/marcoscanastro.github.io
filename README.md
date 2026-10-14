@@ -17,7 +17,11 @@ Abre o URL que aparece no terminal (normalmente `http://localhost:5173`).
 npm run build
 ```
 
-Gera os ficheiros finais em `dist/`, prontos para publicar em qualquer serviço de alojamento estático (Vercel, Netlify, GitHub Pages, etc.).
+Gera os ficheiros finais em `dist/`, prontos para publicar em qualquer serviço de alojamento estático.
+
+### Deploy (produção)
+
+O site está publicado em **https://katsuo666.github.io** (repositório `Katsuo666/Katsuo666.github.io`). Cada `git push` para `main` corre `.github/workflows/deploy.yml`, que faz `npm ci` + `npm run build` e publica `dist/` no GitHub Pages — não é preciso fazer deploy manual. Para forçar um novo deploy sem alterações: separador **Actions → Deploy to GitHub Pages → Run workflow**.
 
 ## Como editar o conteúdo
 
