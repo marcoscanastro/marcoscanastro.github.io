@@ -27,15 +27,29 @@ O site está publicado em **https://marcoscanastro.github.io** (repositório `ma
 
 Não é preciso mexer nos componentes para atualizar o conteúdo do site — está tudo em ficheiros de dados simples:
 
-- **`src/data/projects.js`** — os teus projetos. Cada entrada tem título, descrição (em PT e EN), tecnologias, ícone e links (GitHub/demo). Basta editar ou adicionar entradas.
+- **`src/data/projects.js`** — os teus projetos. Cada entrada tem título e descrição (em PT e EN), tecnologias, links (GitHub/demo) e, opcionalmente, `media` (vídeo + poster), `logo` (ícone da app), `icon` (glifo de reserva) e `private: true` (repositório privado: mostra "Repositório privado" em vez de um link). Basta editar ou adicionar entradas.
 - **`src/data/skills.js`** — as tuas competências, agrupadas por categoria (Linguagens, Frameworks & Ferramentas, Bases de Dados).
 - **`src/i18n/translations.js`** — todos os textos do site em português e inglês (título, subtítulo, secção "Sobre mim", etc.).
 
 ## Foto e CV
 
-- **Foto de perfil (Sobre mim)**: `public/photo.jpg` — foto normal, com fundo. A secção "Sobre mim" mostra-a numa moldura; se o ficheiro não existir, mostra um ícone de substituição em vez de quebrar.
-- **Foto do Hero (recorte sem fundo)**: `public/photo-cutout.png` — versão da foto com o fundo removido (transparente), usada no Hero para o efeito "silhueta flutuante" sobre o fundo roxo. Se quiseres trocar de foto, precisas de gerar um novo recorte com fundo transparente (ex: [remove.bg](https://remove.bg) ou a ferramenta `rembg` em Python) e substituir este ficheiro. Se o ficheiro não existir, o Hero usa `photo.jpg` como alternativa.
-- **CV**: ainda não está ligado nenhum botão de download. Quando tiveres o PDF, coloca-o em `public/cv.pdf` e adiciona um link `<a href="/cv.pdf" download>` onde fizer sentido (por exemplo, na secção Hero ou Contacto).
+- **Foto do Hero (recorte sem fundo)**: `public/photo-cutout.png` — a foto com o fundo removido (transparente), usada no Hero para o efeito "silhueta flutuante". Se quiseres trocar de foto, gera um novo recorte com fundo transparente (ex: [remove.bg](https://remove.bg) ou a ferramenta `rembg` em Python) e substitui este ficheiro. `public/photo.jpg` é a foto original e serve de alternativa se o recorte não existir.
+- **CV**: `public/cv.pdf` — é o ficheiro descarregado pelo botão "Baixar CV" do Hero. Para atualizar o CV, substitui este ficheiro mantendo o nome.
+
+## Imagens e vídeos dos projetos
+
+Ficam em `public/projects/` e são ligados em `src/data/projects.js`:
+
+| Projeto | Ficheiros | Como foi obtido |
+|---|---|---|
+| Model-Viewer, MindAR.js, AR.js | `model-viewer`, `mindar`, `arjs` (`.mp4` + `.webp`) | Capturas das demos publicadas (ver abaixo) |
+| Hand of God | `hand-of-god` (`.mp4` + `.webp`) | Replay do output real de `python cli.py --help` |
+| FinFlow | `finflow-icon.webp` | Ícone real da app (`ic_launcher-playstore.png`) |
+
+- Cada vídeo é um loop curto, sem áudio, em **H.264 960×540** (ideal abaixo de ~1 MB) com um **poster WebP**. Só toca quando o cartão está visível no ecrã e nunca com "reduzir movimento" ativo (nesse caso fica o poster).
+- As demos de AR foram gravadas com o Chromium (Playwright) a abrir as páginas publicadas, com uma **câmara simulada** (um vídeo da imagem-alvo/marcador) para o AR realmente arrancar; o visualizador 3D é uma volta de 360° ao modelo da própria página. Não são maquetes: é o que as demos mostram.
+- **Para acrescentar um projeto com vídeo:** grava ou exporta o loop, converte com `ffmpeg -i entrada -vf "fps=24,scale=960:-2" -c:v libx264 -crf 27 -pix_fmt yuv420p -movflags +faststart -an nome.mp4`, tira um quadro para `nome.webp`, copia ambos para `public/projects/` e preenche `media: { video, poster, alt: { pt, en } }`.
+- **FinFlow e BTV** ainda não têm capturas de ecrã reais (não existem no repositório): usam o ícone da app / um glifo de reserva até haver imagens.
 
 ## Estrutura
 
