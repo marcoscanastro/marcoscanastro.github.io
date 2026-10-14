@@ -21,9 +21,11 @@ export const translations = {
       ctaCv: "Baixar CV",
       stackLabel: "Tecnologias com que trabalho",
       statusBadge: "Aberto a oportunidades",
+      pillTitle: "Dev FullStack",
+      pillSub: "Sistemas & Dados",
       metrics: [
-        { label: "Estado Atual", value: "Estagiário", sub: "Aberto a estágios e empregos a partir de Outubro" },
-        { label: "Cargo & Nível", value: "Dev Júnior", sub: "Sistemas & Análise de Dados" },
+        { label: "Estado Atual", value: "Freelancer", sub: "Aberto a novas oportunidades" },
+        { label: "Cargo & Nível", value: "Dev FullStack", sub: "Sistemas & Análise de Dados" },
         {
           label: "Formações",
           value: "CET Nível 4 e 5",
@@ -103,9 +105,11 @@ export const translations = {
       ctaCv: "Download CV",
       stackLabel: "Technologies I work with",
       statusBadge: "Open to opportunities",
+      pillTitle: "Full-Stack Dev",
+      pillSub: "Systems & Data",
       metrics: [
-        { label: "Current Status", value: "Intern", sub: "Open to internships & jobs from October" },
-        { label: "Role & Level", value: "Junior Dev", sub: "Systems & Data Analysis" },
+        { label: "Current Status", value: "Freelancer", sub: "Open to new opportunities" },
+        { label: "Role & Level", value: "Full-Stack Dev", sub: "Systems & Data Analysis" },
         {
           label: "Education",
           value: "CET Level 4 & 5",

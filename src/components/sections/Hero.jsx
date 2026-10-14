@@ -154,8 +154,8 @@ export function Hero() {
                   <span className="material-symbols-outlined text-[18px]">terminal</span>
                 </div>
                 <div>
-                  <div className="font-mono text-xs font-semibold text-on-surface">Dev Júnior</div>
-                  <div className="font-mono text-[9px] text-primary/80">Sistemas & Dados</div>
+                  <div className="font-mono text-xs font-semibold text-on-surface">{t.hero.pillTitle}</div>
+                  <div className="font-mono text-[9px] text-primary/80">{t.hero.pillSub}</div>
                 </div>
               </div>
             </div>

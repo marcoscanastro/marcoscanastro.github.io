@@ -1,15 +1,15 @@
 export const skills = [
   {
     category: { pt: "Linguagens", en: "Languages" },
-    items: ["Kotlin", "C#", "Java", "Python"],
+    items: ["Kotlin", "C#", "Java", "Python", "GDScript", "C++"],
   },
   {
     category: { pt: "Web", en: "Web" },
-    items: ["JavaScript", "HTML/CSS", "React", "Vue", "PHP", "Laravel", "API Rest"],
+    items: ["JavaScript", "HTML/CSS", "React", "Vue", "PHP", "Laravel", "API Rest", "Next.js", "Node.js", "Inertia.js"],
   },
   {
     category: { pt: "Bases de Dados", en: "Databases" },
-    items: ["SQL", "NoSQL"],
+    items: ["SQL", "NoSQL", "PostgreSQL"],
   },
   {
     category: { pt: "Ferramentas", en: "Tools" },
