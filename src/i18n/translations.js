@@ -24,7 +24,11 @@ export const translations = {
       metrics: [
         { label: "Estado Atual", value: "Estagiário", sub: "Aberto a estágios e empregos a partir de Outubro" },
         { label: "Cargo & Nível", value: "Dev Júnior", sub: "Sistemas & Análise de Dados" },
-        { label: "Formações", value: "CET Nível 4", sub: "IEFP · 2025-2026" },
+        {
+          label: "Formações",
+          value: "CET Nível 4 e 5",
+          sub: "Nível 4 · Análise de Dados\nNível 5 · Técnico Especialista em Tecnologias e Programação de Sistemas de Informação\nIEFP · 2025-2026",
+        },
       ],
     },
     about: {
@@ -102,7 +106,11 @@ export const translations = {
       metrics: [
         { label: "Current Status", value: "Intern", sub: "Open to internships & jobs from October" },
         { label: "Role & Level", value: "Junior Dev", sub: "Systems & Data Analysis" },
-        { label: "Education", value: "Level 4 CET", sub: "IEFP · 2025-2026" },
+        {
+          label: "Education",
+          value: "CET Level 4 & 5",
+          sub: "Level 4 · Data Analysis\nLevel 5 · Specialist Technician in Information Systems Technologies and Programming\nIEFP · 2025-2026",
+        },
       ],
     },
     about: {

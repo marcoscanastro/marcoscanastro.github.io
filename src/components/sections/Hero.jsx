@@ -81,7 +81,7 @@ export function Hero() {
           </div>
 
           <div
-            className="hero-in grid max-w-lg grid-cols-1 gap-4 border-t border-outline-dim pt-6 sm:grid-cols-3 xl:max-w-2xl xl:gap-5 xl:pt-8"
+            className="hero-in grid max-w-lg grid-cols-1 gap-4 border-t border-outline-dim pt-6 sm:grid-cols-[1fr_1fr_1.7fr] xl:max-w-2xl xl:gap-5 xl:pt-8"
             style={{ animationDelay: "280ms" }}
           >
             {t.hero.metrics.map((metric) => (
@@ -95,7 +95,7 @@ export function Hero() {
                 <div className="mt-1.5 font-display text-sm font-bold text-primary xl:mt-2 xl:text-lg">
                   {metric.value}
                 </div>
-                <div className="mt-0.5 font-mono text-[9px] text-on-surface-variant xl:text-[11px]">
+                <div className="mt-0.5 font-mono text-[9px] whitespace-pre-line text-on-surface-variant xl:text-[11px]">
                   {metric.sub}
                 </div>
               </div>
