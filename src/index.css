@@ -25,6 +25,25 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
+  --color-primary: #6d28d9;
+  --color-primary-glow: #9333ea;
+  --color-background: #faf8ff;
+  --color-surface-dim: #f1edfb;
+  --color-surface: #ffffff;
+  --color-surface-card: #ffffff;
+  --color-surface-card-hover: #f4f0ff;
+  --color-outline-dim: #e2d9f3;
+  --color-on-surface: #1c1530;
+  --color-on-surface-variant: #5b5272;
+}
+
+html[data-theme="light"] .text-glow-purple {
+  text-shadow: none;
 }
 
 body {

@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useLanguage } from "../i18n/LanguageContext"
 import { LanguageSwitcher } from "./LanguageSwitcher"
+import { ThemeToggle } from "./ThemeToggle"
 
 export function Navbar() {
   const { t } = useLanguage()
@@ -21,7 +22,7 @@ export function Navbar() {
           <div className="flex h-8 w-8 items-center justify-center rounded-full border border-primary/50 bg-primary-container/30 font-mono text-xs font-bold text-primary shadow-[0_0_15px_rgba(168,85,247,0.35)] transition-transform duration-200 ease-out group-hover:scale-105">
             MC
           </div>
-          <span className="font-display text-sm font-bold text-white transition-colors duration-200 group-hover:text-primary">
+          <span className="font-display text-sm font-bold text-on-surface transition-colors duration-200 group-hover:text-primary">
             Marcos Canastro
           </span>
         </a>
@@ -36,9 +37,10 @@ export function Navbar() {
         </nav>
 
         <div className="flex items-center gap-3">
+          <ThemeToggle />
           <LanguageSwitcher />
           <button
-            className="text-white transition-transform duration-150 ease-out active:scale-90 md:hidden"
+            className="text-on-surface transition-transform duration-150 ease-out active:scale-90 md:hidden"
             aria-label="Menu"
             onClick={() => setOpen((v) => !v)}
           >

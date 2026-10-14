@@ -14,7 +14,7 @@ export function About() {
         <span className="font-mono text-xs uppercase tracking-widest text-primary">
           {t.about.eyebrow}
         </span>
-        <h2 className="mt-2 font-display text-3xl font-bold text-white">{t.about.title}</h2>
+        <h2 className="mt-2 font-display text-3xl font-bold text-on-surface">{t.about.title}</h2>
         <p className="mt-4 leading-relaxed text-on-surface-variant">{t.about.body}</p>
       </div>
     </section>

@@ -30,7 +30,7 @@ export function ProjectCard({ project, i = 0 }) {
       <div className="flex flex-1 flex-col justify-between p-6">
         <div>
           <div className="mb-2 flex items-center justify-between gap-3">
-            <h3 className="font-display text-xl font-bold text-white transition-colors duration-200 group-hover:text-primary">
+            <h3 className="font-display text-xl font-bold text-on-surface transition-colors duration-200 group-hover:text-primary">
               {project.title[lang]}
             </h3>
             {project.links.demo || project.links.github !== "#" ? (

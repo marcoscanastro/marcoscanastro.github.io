@@ -28,6 +28,13 @@ Fundo ambiente: `App.jsx` tem uma camada `fixed inset-0` com 3 blobs roxos desfo
 
 Ícones: fonte **Material Symbols Outlined** (Google Fonts) para ícones genéricos (setas, terminal, base de dados), e SVGs inline (`src/components/Icons.jsx`) para GitHub/LinkedIn/Mail — evita adicionar uma biblioteca de ícones em JS para apenas ~3 ícones de marca.
 
+### Modo claro / escuro
+
+O tema é definido por `data-theme="light|dark"` no `<html>`. Os tokens de cor (`--color-*`, em `src/index.css`) têm os valores escuros por defeito e são redefinidos no bloco `html[data-theme="light"]` — como todas as classes Tailwind (`bg-surface-card`, `text-on-surface`, `border-outline-dim`…) usam essas variáveis, não é preciso classes `dark:` em lado nenhum. Por isso evita cores fixas (`text-white`, `bg-[#...]`) nos componentes: usa sempre os tokens (`text-on-surface`, `bg-surface-dim`…), senão ficam ilegíveis num dos modos.
+
+- Um pequeno script em `index.html` define o tema antes do primeiro render (escolha guardada em `localStorage["theme"]`, senão a preferência do sistema), para não haver "flash" do tema errado.
+- `src/components/ThemeToggle.jsx` (na navbar) alterna o atributo e guarda a escolha.
+
 ### Foto do Hero (recorte sem fundo)
 
 O Hero usa `public/photo-cutout.png` — a foto de perfil com o fundo removido (canal alfa transparente), para a colocar diretamente sobre o fundo ambiente com máscaras CSS (`mask-image: linear-gradient(...)` para desvanecer a base, `radial-gradient(...)` para a grelha atrás), tal como a "frameless cutout" da referência. Este ficheiro foi gerado uma única vez com `rembg` (Python, modelo `u2net_human_seg`) a partir de `public/photo.jpg` — não é gerado automaticamente pelo build. Se a foto for substituída, é preciso gerar um novo recorte com fundo transparente (rembg, remove.bg, etc.) e voltar a guardar em `public/photo-cutout.png`.

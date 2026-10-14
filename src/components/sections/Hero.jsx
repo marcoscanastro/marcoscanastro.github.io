@@ -36,11 +36,11 @@ export function Hero() {
           </div>
 
           <h1
-            className="hero-in font-display text-4xl font-bold leading-[1.15] text-white sm:text-5xl lg:text-6xl xl:text-8xl"
+            className="hero-in font-display text-4xl font-bold leading-[1.15] text-on-surface sm:text-5xl lg:text-6xl xl:text-8xl"
             style={{ animationDelay: "70ms" }}
           >
             {t.hero.title1}{" "}
-            <span className="bg-linear-to-r from-white via-primary to-primary-glow bg-clip-text text-transparent text-glow-purple">
+            <span className="bg-linear-to-r from-on-surface via-primary to-primary-glow bg-clip-text text-transparent text-glow-purple">
               {t.hero.titleHighlight}
             </span>{" "}
             {t.hero.title2}
@@ -59,21 +59,21 @@ export function Hero() {
           >
             <a
               href="#projetos"
-              className="flex items-center gap-2 rounded-full bg-white px-8 py-3.5 font-mono text-sm font-semibold text-background shadow-[0_0_28px_rgba(210,187,255,0.4)] transition duration-200 ease-out hover:bg-primary hover:shadow-[0_0_35px_rgba(210,187,255,0.8)] active:scale-97 xl:px-10 xl:py-4 xl:text-base"
+              className="flex items-center gap-2 rounded-full bg-on-surface px-8 py-3.5 font-mono text-sm font-semibold text-background shadow-[0_0_28px_rgba(210,187,255,0.4)] transition duration-200 ease-out hover:bg-primary hover:shadow-[0_0_35px_rgba(210,187,255,0.8)] active:scale-97 xl:px-10 xl:py-4 xl:text-base"
             >
               {t.hero.ctaPrimary}
               <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
             </a>
             <a
               href="#contacto"
-              className="rounded-full border border-primary/30 bg-surface-card px-7 py-3.5 font-mono text-sm text-white transition duration-200 ease-out hover:border-primary/70 hover:bg-surface-card-hover active:scale-97 xl:px-9 xl:py-4 xl:text-base"
+              className="rounded-full border border-primary/30 bg-surface-card px-7 py-3.5 font-mono text-sm text-on-surface transition duration-200 ease-out hover:border-primary/70 hover:bg-surface-card-hover active:scale-97 xl:px-9 xl:py-4 xl:text-base"
             >
               {t.hero.ctaSecondary}
             </a>
             <a
               href="/cv.pdf"
               download
-              className="flex items-center gap-2.5 rounded-full border border-primary/30 bg-surface-card px-7 py-3.5 font-mono text-sm text-white transition duration-200 ease-out hover:border-primary/70 hover:bg-surface-card-hover active:scale-97 xl:px-9 xl:py-4 xl:text-base"
+              className="flex items-center gap-2.5 rounded-full border border-primary/30 bg-surface-card px-7 py-3.5 font-mono text-sm text-on-surface transition duration-200 ease-out hover:border-primary/70 hover:bg-surface-card-hover active:scale-97 xl:px-9 xl:py-4 xl:text-base"
             >
               {t.hero.ctaCv}
               <span className="material-symbols-outlined text-[18px] text-primary">download</span>
@@ -129,21 +129,23 @@ export function Hero() {
               </span>
             </div>
 
-            <div
-              className="relative z-10 flex w-full items-end justify-center"
-              style={{
-                maskImage: "linear-gradient(to bottom, black 60%, transparent 96%)",
-                WebkitMaskImage: "linear-gradient(to bottom, black 60%, transparent 96%)",
-              }}
-            >
-              <img
-                src="/photo-cutout.png"
-                alt="Marcos Canastro"
-                className="w-full object-cover object-top drop-shadow-[0_0_45px_rgba(124,58,237,0.5)]"
-                onError={(e) => {
-                  e.currentTarget.src = "/photo.jpg"
+            <div className="relative z-10 w-full drop-shadow-[0_0_45px_rgba(124,58,237,0.5)]">
+              <div
+                className="flex w-full items-end justify-center"
+                style={{
+                  maskImage: "linear-gradient(to bottom, black 60%, transparent 96%)",
+                  WebkitMaskImage: "linear-gradient(to bottom, black 60%, transparent 96%)",
                 }}
-              />
+              >
+                <img
+                  src="/photo-cutout.png"
+                  alt="Marcos Canastro"
+                  className="w-full object-cover object-top"
+                  onError={(e) => {
+                    e.currentTarget.src = "/photo.jpg"
+                  }}
+                />
+              </div>
             </div>
 
             <div className="absolute right-6 bottom-0 left-6 z-20 flex items-center justify-between rounded-2xl border border-primary/30 bg-surface/85 p-3 backdrop-blur-xl">
@@ -152,7 +154,7 @@ export function Hero() {
                   <span className="material-symbols-outlined text-[18px]">terminal</span>
                 </div>
                 <div>
-                  <div className="font-mono text-xs font-semibold text-white">Dev Júnior</div>
+                  <div className="font-mono text-xs font-semibold text-on-surface">Dev Júnior</div>
                   <div className="font-mono text-[9px] text-primary/80">Sistemas & Dados</div>
                 </div>
               </div>

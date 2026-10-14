@@ -6,6 +6,8 @@ export const translations = {
       projects: "Projetos",
       skills: "Skills",
       contact: "Contacto",
+      themeLight: "Modo claro",
+      themeDark: "Modo escuro",
     },
     hero: {
       badge: "Desenvolvedor de Software Júnior",
@@ -80,6 +82,8 @@ export const translations = {
       projects: "Projects",
       skills: "Skills",
       contact: "Contact",
+      themeLight: "Light mode",
+      themeDark: "Dark mode",
     },
     hero: {
       badge: "Junior Software Developer",

@@ -13,7 +13,7 @@ export function Projects() {
             <span className="font-mono text-xs uppercase tracking-widest text-primary">
               {t.projects.eyebrow}
             </span>
-            <h2 className="mt-2 font-display text-3xl font-bold text-white sm:text-4xl xl:text-5xl">
+            <h2 className="mt-2 font-display text-3xl font-bold text-on-surface sm:text-4xl xl:text-5xl">
               {t.projects.title}
             </h2>
           </div>
@@ -21,7 +21,7 @@ export function Projects() {
             href="https://github.com/Katsuo666"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 self-start rounded-full border border-primary/30 px-4 py-2 font-mono text-xs text-primary transition-colors hover:bg-primary/10 hover:text-white"
+            className="inline-flex items-center gap-2 self-start rounded-full border border-primary/30 px-4 py-2 font-mono text-xs text-primary transition-colors hover:bg-primary/10 hover:text-on-surface"
           >
             {t.projects.viewAll}
             <span className="material-symbols-outlined text-[16px]">arrow_outward</span>

@@ -18,7 +18,7 @@ export function LanguageSwitcher() {
           key={code}
           onClick={() => setLanguage(code)}
           className={`relative z-10 rounded-full px-2.5 py-1 uppercase transition-colors duration-200 ${
-            lang === code ? "text-white" : "text-on-surface-variant hover:text-white"
+            lang === code ? "text-white" : "text-on-surface-variant hover:text-on-surface"
           }`}
         >
           {code}

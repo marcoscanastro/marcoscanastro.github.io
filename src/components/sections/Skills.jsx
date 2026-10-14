@@ -38,7 +38,7 @@ export function Skills() {
           <span className="font-mono text-xs uppercase tracking-widest text-primary">
             {t.skills.eyebrow}
           </span>
-          <h2 className="mt-2 font-display text-3xl font-bold text-white sm:text-4xl xl:text-5xl">
+          <h2 className="mt-2 font-display text-3xl font-bold text-on-surface sm:text-4xl xl:text-5xl">
             {t.skills.title}
           </h2>
         </div>
