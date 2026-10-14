@@ -21,7 +21,7 @@ Gera os ficheiros finais em `dist/`, prontos para publicar em qualquer serviço 
 
 ### Deploy (produção)
 
-O site está publicado em **https://katsuo666.github.io** (repositório `Katsuo666/Katsuo666.github.io`). Cada `git push` para `main` corre `.github/workflows/deploy.yml`, que faz `npm ci` + `npm run build` e publica `dist/` no GitHub Pages — não é preciso fazer deploy manual. Para forçar um novo deploy sem alterações: separador **Actions → Deploy to GitHub Pages → Run workflow**.
+O site está publicado em **https://marcoscanastro.github.io** (repositório `marcoscanastro/marcoscanastro.github.io`, na organização `marcoscanastro`). Cada `git push` para `main` corre `.github/workflows/deploy.yml`, que faz `npm ci` + `npm run build` e publica `dist/` no GitHub Pages — não é preciso fazer deploy manual. Para forçar um novo deploy sem alterações: separador **Actions → Deploy to GitHub Pages → Run workflow**.
 
 ## Como editar o conteúdo
 
