@@ -62,6 +62,9 @@ body {
   display: inline-block;
   white-space: nowrap;
   direction: ltr;
+  /* até a fonte carregar, o nome da ligadura (ex: "dark_mode") não pode transbordar */
+  width: 1em;
+  overflow: hidden;
 }
 
 @layer utilities {
