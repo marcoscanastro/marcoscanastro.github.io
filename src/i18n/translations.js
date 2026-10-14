@@ -63,7 +63,9 @@ export const translations = {
       eyebrow: "Trabalho",
       title: "Projetos em Destaque",
       viewAll: "Ver todos no GitHub",
-      viewProject: "Ver projeto",
+      viewDemo: "Ver demo",
+      viewCode: "Ver código",
+      private: "Repositório privado",
     },
     contact: {
       badge: "Aberto a novas oportunidades",
@@ -139,7 +141,9 @@ export const translations = {
       eyebrow: "Work",
       title: "Featured Projects",
       viewAll: "View all on GitHub",
-      viewProject: "View project",
+      viewDemo: "View demo",
+      viewCode: "View code",
+      private: "Private repository",
     },
     contact: {
       badge: "Open to new opportunities",

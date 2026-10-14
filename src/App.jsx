@@ -17,6 +17,7 @@ export function App() {
         <div className="bg-tiles-grid absolute inset-0 opacity-75" />
       </div>
 
+      <div className="scroll-progress" aria-hidden="true" />
       <Navbar />
       <main className="relative z-10">
         <Hero />

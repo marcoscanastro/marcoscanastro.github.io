@@ -80,11 +80,16 @@ body {
   .reveal {
     opacity: 0;
     transform: translateY(14px);
-    transition: opacity 550ms var(--ease-snappy), transform 550ms var(--ease-snappy);
+    filter: blur(6px);
+    transition:
+      opacity 550ms var(--ease-snappy),
+      transform 550ms var(--ease-snappy),
+      filter 550ms var(--ease-snappy);
   }
   .reveal-visible {
     opacity: 1;
     transform: translateY(0);
+    filter: none;
   }
 }
 
@@ -101,6 +106,130 @@ body {
 
 .hero-in {
   animation: hero-fade-up 600ms var(--ease-snappy) both;
+}
+
+/* Entrada autoral do herói: o título é "revelado" de cima para baixo e a foto sobe de trás da secção.
+   fill-mode "backwards": no fim volta ao estilo natural (sem clip-path permanente a cortar o brilho). */
+@keyframes hero-wipe {
+  from {
+    clip-path: inset(0 0 100% 0);
+    transform: translateY(28px);
+  }
+  to {
+    clip-path: inset(-30% -10% -30% -10%);
+    transform: none;
+  }
+}
+
+.hero-title {
+  animation: hero-wipe 760ms var(--ease-snappy) backwards;
+}
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(48px) scale(0.97);
+    clip-path: inset(16% 0 0 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    clip-path: inset(-12% -12% -12% -12%);
+  }
+}
+
+.hero-photo {
+  animation: hero-rise 900ms var(--ease-snappy) backwards;
+}
+
+/* Cartões de projeto: luz que segue o rato, imagem que "assenta" ao entrar e parallax suave.
+   --px/--py (-0.5..0.5) e --mx/--my (%) são escritos pelo componente via style.setProperty. */
+.project-card {
+  --px: 0;
+  --py: 0;
+  --mx: 50%;
+  --my: 50%;
+}
+
+.project-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(
+    460px circle at var(--mx) var(--my),
+    color-mix(in oklab, var(--color-primary) 14%, transparent),
+    transparent 62%
+  );
+  transition: opacity 300ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-card:hover::after {
+    opacity: 1;
+  }
+}
+
+.media-settle {
+  transform: scale(1.14);
+  transition: transform 1400ms var(--ease-snappy);
+}
+
+.media-settled {
+  transform: scale(1);
+}
+
+.media-parallax {
+  transform: translate3d(calc(var(--px) * -14px), calc(var(--py) * -10px), 0) scale(1.06);
+  transition: transform 450ms var(--ease-snappy);
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+/* Progresso de leitura da página (CSS puro; sem suporte, fica escondido). */
+.scroll-progress {
+  display: none;
+}
+
+@supports (animation-timeline: scroll()) {
+  .scroll-progress {
+    display: block;
+    position: fixed;
+    inset: 0 0 auto 0;
+    height: 2px;
+    z-index: 60;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    background: linear-gradient(90deg, var(--color-primary-container), var(--color-primary-glow));
+    animation: scroll-progress linear both;
+    animation-timeline: scroll(root);
+  }
+}
+
+@keyframes scroll-progress {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* A troca de tema usa um círculo que cresce a partir do botão (animado por WAAPI em ThemeToggle). */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
 }
 
 @keyframes glow-breathe {
@@ -123,13 +252,20 @@ body {
   .reveal {
     opacity: 1;
     transform: none;
+    filter: none;
     transition: none;
   }
-  .hero-in {
+  .hero-in,
+  .hero-title,
+  .hero-photo,
+  .glow-breathe,
+  .float-slow {
     animation: none;
   }
-  .glow-breathe {
-    animation: none;
+  .media-settle,
+  .media-parallax {
+    transform: none;
+    transition: none;
   }
 }
 

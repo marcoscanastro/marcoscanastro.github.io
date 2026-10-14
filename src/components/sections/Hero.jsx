@@ -36,7 +36,7 @@ export function Hero() {
           </div>
 
           <h1
-            className="hero-in font-display text-4xl font-bold leading-[1.15] text-on-surface sm:text-5xl lg:text-6xl xl:text-8xl"
+            className="hero-title font-display text-4xl font-bold leading-[1.15] text-on-surface sm:text-5xl lg:text-6xl xl:text-8xl"
             style={{ animationDelay: "70ms" }}
           >
             {t.hero.title1}{" "}
@@ -104,7 +104,7 @@ export function Hero() {
         </div>
 
         <div
-          className="hero-in relative flex justify-center lg:col-span-6"
+          className="hero-photo relative flex justify-center lg:col-span-6"
           style={{ animationDelay: "180ms" }}
         >
           <div className="relative flex w-full max-w-lg items-center justify-center xl:max-w-2xl">
