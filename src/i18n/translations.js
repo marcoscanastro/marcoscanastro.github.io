@@ -3,6 +3,7 @@ export const translations = {
     nav: {
       solutions: "Soluções",
       about: "Sobre",
+      journey: "Percurso",
       projects: "Projetos",
       skills: "Skills",
       contact: "Contacto",
@@ -19,6 +20,7 @@ export const translations = {
       ctaPrimary: "Ver Projetos",
       ctaSecondary: "Contactar",
       ctaCv: "Baixar CV",
+      cvHref: "/cv-pt.pdf",
       stackLabel: "Tecnologias com que trabalho",
       statusBadge: "Aberto a oportunidades",
       pillTitle: "Dev FullStack",
@@ -38,6 +40,11 @@ export const translations = {
       title: "Quem sou eu",
       body:
         "Sou o Marcos, jovem desenvolvedor de software júnior com formação em Programação de Sistemas Informáticos e Análise de Dados (IEFP). Tenho experiência prática em lógica de programação, desenvolvimento de software e resolução de problemas informáticos, e procuro contribuir com dedicação e vontade de aprender continuamente em projetos reais.",
+    },
+    journey: {
+      eyebrow: "Percurso",
+      title: "Estágios, formação e experiência",
+      languages: "Idiomas",
     },
     skills: {
       eyebrow: "Tecnologias",
@@ -87,6 +94,7 @@ export const translations = {
     nav: {
       solutions: "Solutions",
       about: "About",
+      journey: "Journey",
       projects: "Projects",
       skills: "Skills",
       contact: "Contact",
@@ -94,7 +102,7 @@ export const translations = {
       themeDark: "Dark mode",
     },
     hero: {
-      badge: "Junior Software Developer",
+      badge: "Software Developer",
       title1: "Building",
       titleHighlight: "solid software",
       title2: "from scratch.",
@@ -103,6 +111,7 @@ export const translations = {
       ctaPrimary: "View Projects",
       ctaSecondary: "Get in Touch",
       ctaCv: "Download CV",
+      cvHref: "/cv-en.pdf",
       stackLabel: "Technologies I work with",
       statusBadge: "Open to opportunities",
       pillTitle: "Full-Stack Dev",
@@ -121,7 +130,12 @@ export const translations = {
       eyebrow: "About me",
       title: "Who I am",
       body:
-        "I'm Marcos, a junior software developer trained in Systems Programming and Data Analysis (IEFP). I have hands-on experience in programming logic, software development and problem-solving, and I'm looking to contribute with dedication and a constant drive to learn on real projects.",
+        "I'm Marcos, a software developer trained in Systems Programming and Data Analysis (IEFP). I have hands-on experience in programming logic, software development and problem-solving, and I'm looking to contribute with dedication and a constant drive to learn on real projects.",
+    },
+    journey: {
+      eyebrow: "Journey",
+      title: "Internships, education and experience",
+      languages: "Languages",
     },
     skills: {
       eyebrow: "Technologies",

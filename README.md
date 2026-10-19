@@ -28,13 +28,14 @@ O site está publicado em **https://marcoscanastro.github.io** (repositório `ma
 Não é preciso mexer nos componentes para atualizar o conteúdo do site — está tudo em ficheiros de dados simples:
 
 - **`src/data/projects.js`** — os teus projetos. Cada entrada tem título e descrição (em PT e EN), tecnologias, links (GitHub/demo) e, opcionalmente, `media` (vídeo + poster), `logo` (ícone da app), `icon` (glifo de reserva) e `private: true` (repositório privado: mostra "Repositório privado" em vez de um link). Basta editar ou adicionar entradas.
+- **`src/data/journey.js`** — a secção "Percurso" (estágios, formação, experiência e idiomas), em PT e EN. Cada entrada pode ter `logo` (ficheiro em `public/percurso/`; `logoTile: true` põe-no sobre fundo branco, para logótipos transparentes), `icon` (glifo de reserva), `period` (opcional), `kind`, `title`, `body` e `tags`.
 - **`src/data/skills.js`** — as tuas competências, agrupadas por categoria (Linguagens, Frameworks & Ferramentas, Bases de Dados).
 - **`src/i18n/translations.js`** — todos os textos do site em português e inglês (título, subtítulo, secção "Sobre mim", etc.).
 
 ## Foto e CV
 
 - **Foto do Hero (recorte sem fundo)**: `public/photo-cutout.png` — a foto com o fundo removido (transparente), usada no Hero para o efeito "silhueta flutuante". Se quiseres trocar de foto, gera um novo recorte com fundo transparente (ex: [remove.bg](https://remove.bg) ou a ferramenta `rembg` em Python) e substitui este ficheiro. `public/photo.jpg` é a foto original e serve de alternativa se o recorte não existir.
-- **CV**: `public/cv.pdf` — é o ficheiro descarregado pelo botão "Baixar CV" do Hero. Para atualizar o CV, substitui este ficheiro mantendo o nome.
+- **CV**: `public/cv-pt.pdf` e `public/cv-en.pdf` — o botão "Baixar CV" do Hero descarrega o PDF do idioma ativo (PT ou EN); o caminho de cada um está em `hero.cvHref` em `src/i18n/translations.js`. Para atualizar um CV, substitui o ficheiro mantendo o nome.
 
 ## Imagens e vídeos dos projetos
 
@@ -60,7 +61,7 @@ src/
 ├── data/                    # projetos e skills (conteúdo editável)
 ├── hooks/useInView.js       # animação de entrada ao fazer scroll
 └── components/
-    ├── sections/             # Hero, Solutions, About, Skills, Projects, Contact
+    ├── sections/             # Hero, Solutions, About, Journey, Skills, Projects, Contact
     └── ...                   # Navbar, Footer, ProjectCard, ícones
 ```
 

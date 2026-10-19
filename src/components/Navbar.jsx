@@ -4,7 +4,7 @@ import { LanguageSwitcher } from "./LanguageSwitcher"
 import { ThemeToggle } from "./ThemeToggle"
 
 // Mesma ordem em que as secções aparecem na página (ver App.jsx).
-const sectionIds = ["solucoes", "sobre", "skills", "projetos", "contacto"]
+const sectionIds = ["solucoes", "sobre", "percurso", "skills", "projetos", "contacto"]
 
 export function Navbar() {
   const { t } = useLanguage()
@@ -14,6 +14,7 @@ export function Navbar() {
   const labels = {
     solucoes: t.nav.solutions,
     sobre: t.nav.about,
+    percurso: t.nav.journey,
     skills: t.nav.skills,
     projetos: t.nav.projects,
     contacto: t.nav.contact,

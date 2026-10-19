@@ -1,7 +1,7 @@
 import { useLanguage } from "../../i18n/LanguageContext"
 
 export function Hero() {
-  const { t } = useLanguage()
+  const { t, lang } = useLanguage()
 
   const stack = [
     "React",
@@ -71,8 +71,8 @@ export function Hero() {
               {t.hero.ctaSecondary}
             </a>
             <a
-              href="/cv.pdf"
-              download
+              href={t.hero.cvHref}
+              download={`Marcos-Canastro-CV-${lang.toUpperCase()}.pdf`}
               className="flex items-center gap-2.5 rounded-full border border-primary/30 bg-surface-card px-7 py-3.5 font-mono text-sm text-on-surface transition duration-200 ease-out hover:border-primary/70 hover:bg-surface-card-hover active:scale-97 xl:px-9 xl:py-4 xl:text-base"
             >
               {t.hero.ctaCv}
