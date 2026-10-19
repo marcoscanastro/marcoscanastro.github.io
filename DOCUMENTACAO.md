@@ -19,7 +19,7 @@ Implementado com `src/i18n/LanguageContext.jsx`:
 
 - `src/data/projects.js` — array de projetos. Adicionar/editar entradas aqui atualiza automaticamente o grid em `Projects.jsx`, sem tocar em componentes. Campos opcionais: `media` (`video`, `poster`, `alt` PT/EN), `logo` (ícone da app), `icon` (glifo de reserva) e `private` (sem link para o código). Os ficheiros ficam em `public/projects/` (ver README).
 - `src/data/skills.js` — array de categorias de competências.
-- `src/data/journey.js` — itens do "Percurso" (`Journey.jsx`, entre Sobre e Skills) e lista de idiomas. A ordem do array é a ordem na página; só os itens com datas no CV têm `period` — os estágios (Amarela Mecânica Filmes, MERKLE Portugal) não têm, para não inventar datas. Logótipos em `public/percurso/` (webp otimizado); os transparentes usam `logoTile` para ficarem legíveis também no tema escuro.
+- `src/data/journey.js` — itens do "Percurso" (`Journey.jsx`, entre Sobre e Skills) e lista de idiomas. A ordem do array é a ordem na página; os estágios vêm primeiro (MERKLE Portugal é o mais recente) e não têm `period`, para não inventar datas; os restantes só têm `period` quando o CV o indica. Logótipos em `public/percurso/` (webp otimizado); os transparentes usam `logoTile` para ficarem legíveis também no tema escuro.
 - CV por idioma: `public/cv-pt.pdf` e `public/cv-en.pdf`, escolhidos em `hero.cvHref` (`translations.js`), por isso o botão do Hero acompanha o idioma do site.
 
 ## Tema visual

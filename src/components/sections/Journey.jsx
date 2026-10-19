@@ -13,12 +13,12 @@ function Item({ item, i, lang }) {
       style={{ transitionDelay: isVisible ? `${Math.min(i, 2) * 70}ms` : "0ms" }}
     >
       <div
-        className={`absolute top-0 left-0 flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl border border-outline-dim sm:h-14 sm:w-14 ${item.logoTile ? "bg-white p-1.5" : "bg-surface-card"} ${item.logo ? "" : "text-primary"}`}
+        className={`absolute top-0 left-0 flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl border border-outline-dim sm:h-14 sm:w-14 ${item.logoTile ? "bg-white p-1.5" : "bg-surface-card"}`}
       >
         {item.logo ? (
           <img src={item.logo} alt="" width="112" height="112" className="h-full w-full object-contain" />
         ) : (
-          <span className="material-symbols-outlined text-[24px]">{item.icon}</span>
+          <span className="material-symbols-outlined text-[24px] text-primary">{item.icon}</span>
         )}
       </div>
 

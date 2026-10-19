@@ -1,6 +1,17 @@
 // Percurso (do CV). logo: ficheiro em public/percurso/. icon: glifo de reserva. period só quando o CV o indica.
 export const journey = [
   {
+    id: "merkle",
+    logo: "/percurso/merkle.webp",
+    kind: { pt: "Estágio · Leiria", en: "Internship · Leiria" },
+    title: { pt: "MERKLE Portugal", en: "MERKLE Portugal" },
+    body: {
+      pt: "Estágio no setor de Leiria, como Desenvolvedor Júnior PHP.",
+      en: "Internship in the Leiria office, as a Junior PHP Developer.",
+    },
+    tags: ["PHP"],
+  },
+  {
     id: "amarela",
     logo: "/percurso/amarela-mecanica.webp",
     logoTile: true,
@@ -13,19 +24,9 @@ export const journey = [
     tags: ["3D", "AR/VR"],
   },
   {
-    id: "merkle",
-    logo: "/percurso/merkle.webp",
-    kind: { pt: "Estágio · Leiria", en: "Internship · Leiria" },
-    title: { pt: "MERKLE Portugal", en: "MERKLE Portugal" },
-    body: {
-      pt: "Estágio no setor de Leiria, como Desenvolvedor Júnior PHP.",
-      en: "Internship in the Leiria office, as a Junior PHP Developer.",
-    },
-    tags: ["PHP"],
-  },
-  {
     id: "iefp",
-    icon: "school",
+    logo: "/percurso/iefp.webp",
+    logoTile: true,
     period: "2025 - 2026",
     kind: { pt: "Formação", en: "Education" },
     title: { pt: "IEFP — dois CET", en: "IEFP — two CET courses" },
